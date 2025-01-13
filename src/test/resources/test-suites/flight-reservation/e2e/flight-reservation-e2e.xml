@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >
+<suite name="flight-reservation-e2e" parallel="tests" thread-count="2">
+    <test name="RegistrationE2eTests">
+        <classes>
+            <class name="tests.flight_reservation.functional.e2e.VerifyFlightBookingE2ECase" />
+        </classes>
+    </test>
+    <test name="RegistrationE2eTestsTwoPassengers">
+        <classes>
+            <class name="tests.flight_reservation.functional.e2e.VerifyFlightBookingE2ECaseTwoPassengers" />
+        </classes>
+    </test>
+</suite>

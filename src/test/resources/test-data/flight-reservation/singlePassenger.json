@@ -1,0 +1,13 @@
+{
+  "firstName": "Sample One",
+  "lastName": "Sample Lname",
+  "email": "sampleOne@sample.com",
+  "password": "sampleOne",
+  "street": "Sample 123 One Street",
+  "city": "Sample One City",
+  "state": "Utah",
+  "zip": "1234",
+  "passengers": "One",
+  "serviceClass": "First",
+  "totalPrice": "584"
+}

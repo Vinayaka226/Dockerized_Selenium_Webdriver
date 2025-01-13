@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://dev.cs.ovgu.de/java/logback/manual/layouts.html -->
+<!--<configuration>-->
+<!--    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        <encoder>-->
+<!--            <pattern>%d{HH:mm:ss.SSS} %-5level [%15.15t] %cyan(%-30.30logger{30}) : %m%n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+<!--    <appender name="FILE" class="ch.qos.logback.core.FileAppender">-->
+<!--        <file>logs.html</file>-->
+<!--        <append>false</append>-->
+<!--        <layout class="ch.qos.logback.classic.html.HTMLLayout">-->
+<!--            <pattern>%relative%thread%mdc%level%logger%msg</pattern>-->
+<!--        </layout>-->
+<!--    </appender>-->
+<!--    <logger name="org.asynchttpclient.netty.handler.WebSocketHandler" level="OFF"/>-->
+<!--    <root level="DEBUG">-->
+<!--        <appender-ref ref="STDOUT" />-->
+<!--        <appender-ref ref="FILE" />-->
+<!--    </root>-->
+<!--</configuration>-->
+
+
+<configuration>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>seleniumLogs.html</file>
+        <append>false</append>
+<!--        <encoder>-->
+<!--&lt;!&ndash;            <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>&ndash;&gt;-->
+<!--&lt;!&ndash;            <pattern>%d{HH:mm} %level [%thread] [%15.15t] %cyan(%-30.30logger{30}) [%file:%line] : %m%n</pattern>&ndash;&gt;-->
+<!--            <pattern>%date %level %thread %mdc %logger [%file:%line] %msg%n</pattern>-->
+<!--        </encoder>-->
+        <layout class="ch.qos.logback.classic.html.HTMLLayout">
+<!--            <pattern>%relative%thread%mdc%level%logger%msg</pattern>&ndash;&gt;-->
+<!--            <pattern>%relative%level%thread%mdc%logger[%file:%line]%msg</pattern>-->
+            <pattern>%relative%level%thread%mdc%logger%msg</pattern>
+        </layout>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="trace">
+        <appender-ref ref="FILE" />
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

@@ -1,0 +1,7 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >
+<suite name="master-suite">
+    <suite-files>
+        <suite-file path="e2e/flight-reservation-e2e.xml" />
+        <suite-file path="functional/flight-reservation-functional.xml" />
+    </suite-files>
+</suite>
