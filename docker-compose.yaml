@@ -1,0 +1,10 @@
+services:
+  flight-reservation:
+    image: <Docker_Username>/selenium
+    environment:
+      - BROWSER=${BROWSER}
+      - HUB_HOST=hub
+      - THREAD_COUNT=1
+      - TEST_SUITE=flight-reservation/master-suite.xml
+    volumes:
+      - ./output/flight-reservation/:/home/Dockerized_Selenium_Webdriver/test-output
